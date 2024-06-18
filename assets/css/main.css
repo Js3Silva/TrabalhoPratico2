@@ -1,0 +1,84 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+ /****************************HEADER INICIO******************************/
+#logo{
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: rgb(186, 186, 186);
+    margin-left: 5px;
+    border-radius: 5px;
+    border-bottom: none;
+}
+
+.nav-link{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#user-perfil{
+    position: left;
+    float: inline-end;
+    text-decoration: none;
+    font-style: none;
+}
+
+ /******************************HEADER INICIO****************************/
+ /************************CARD BOOTSTRAP INICIO*************************/
+  .section2-conteudo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin-left: 10px; 
+    margin-top: 15px;
+    transition: 0.4s;
+}
+
+.card:hover{
+    background-color: rgb(204, 204, 204);
+}
+
+.fa-regular{
+    padding-left: 50px;
+    display: flex;
+    transition: 0.4s;
+}
+
+#star:hover{
+    color:yellow
+}
+
+#person{
+    color:blue;
+}
+
+#link{
+    text-decoration: none;
+    font-style: none;
+    color: black;
+}
+/***************************CARD BOOTSTRAP FIM*************************/
+ /***************************SEÇÃO 4 INICIO*************************/
+
+#imagens{
+    justify-content: space-between;
+}
+
+
+ /***************************SEÇÃO 4 FIM*************************/
+
+ @media screen and (min-width: 654px) {
+
+    #logo{
+        margin-left: 50px;
+    }
+
+    .carousel-inner img{
+        height: 450px;
+    }
+ }

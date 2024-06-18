@@ -1,0 +1,63 @@
+/****************************HEADER INICIO******************************/
+.nav-link{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo{
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: rgb(186, 186, 186);
+    margin-left: 50px;
+    border-radius: 5px;
+    border-bottom: none;
+}
+/****************************HEADER FIM******************************/
+/****************************MAIN******************************/
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.language {
+    padding: 8px 16px;
+    margin: 4px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.star {
+    margin-top: 80px;
+    float: inline-end;
+    text-decoration: none;
+    font-style: none;
+}
+
+#star:hover{
+    color: yellow;
+}
+
+#user:hover{
+    color: blue;
+}
+
+#star{
+    color: black;
+}
+
+#user{
+    color: blue;
+}
+
+
+@media screen and (max-width: 654px) {
+
+    #logo{
+        margin-left: 2px;
+    }
+
+}
