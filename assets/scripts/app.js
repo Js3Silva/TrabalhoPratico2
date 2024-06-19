@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // Limpa o conteúdo da div perfil-container antes de adicionar os dados do perfil
             perfilContainer.innerHTML = '';
 
+            const linkedin_url = "https://www.linkedin.com/in/jonathan-sena13/";
+            const instagram_url = "https://www.instagram.com/js3_silva/";
             // Cria a estrutura HTML com os dados do perfil
             const profileHTML = `
                 <div class="pb-2 mb-4 text-dark border-bottom border-dark">
@@ -29,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div>
                             <a href="mailto:${user.email}" target="_blank" class="btn btn-light"><i class="fa-solid fa-envelope"></i></a>
                             <a href="${user.html_url}" target="_blank" class="btn btn-light"><i class="fa-brands fa-github"></i></a>
-                            <a href="${user.html_url}" target="_blank" class="btn btn-light"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="${user.html_url}" target="_blank" class="btn btn-light"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="${linkedin_url}" target="_blank" class="btn btn-light"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="${instagram_url}" target="_blank" class="btn btn-light"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
