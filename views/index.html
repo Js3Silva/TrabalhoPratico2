@@ -22,188 +22,164 @@
     <title>Projeto 1</title>
 </head>
 
-<!-- Cabeçalho -->
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand ms-3" href="index.html">
-            <button id="logo">JONATHAN</button>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav pe-5">
-                <li class="nav-item">
-                    <a class="nav-link ms-1" href="#secao1">Seção 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link ms-1" href="#secao2">Seção 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link ms-1" href="#secao3">Seção 3</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
-<!-- Seção 1 -->
-<section id="secao1" class="bg-light py-5">
-    <div class="container">
-        <div class="pb-2 mb-4 text-dark border-bottom border-dark">
-            <h2>Perfil</h2>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="../assets/img/Jonathan.jpeg" alt="Imagem Jonathan" class="img-thumbnail" height="250px"
-                    width="250px">
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand ms-3" href="index.html">
+                <button id="logo">JONATHAN</button>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav pe-5">
+                    <li class="nav-item">
+                        <a class="nav-link ms-1" href="#secao1">Seção 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-1" href="#secao2">Seção 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-1" href="#secao3">Seção 3</a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-md-8">
-                <h3>Jonathan Sena da Silva</h3>
-                <p>Formado no curso técnico em eletrônica e cursando graduação em Engenharia de Software, na Pontifícia
-                    Universidade Católica de Minas Gerais (PUC). Experiência com aplicações,
-                    incluindo eletrônica de telecomunicações, sistemas digitais, programação em C, HTML/CSS,
-                    circuitos elétricos, eletrônica analógica e potência.
-                </p>
-                <p><strong>Localização:</strong> Belo Horizonte - MG, Brasil
-                <p id="user-perfil"><a href="#"><i class="fa-regular fa-user text-primary"> 124</i></a></p>
-                </p>
-                <p><strong>Site:</strong> https://www.pucminas.br</p>
-                <div>
-                    <a href="mailto:jonathansilvagw@gmail.com" target="_blank" class="btn btn-light"><i
-                            class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/jonathan-sena13" target="_blank" class="btn btn-light"><i
-                            class="fa-brands fa-linkedin"></i> </a>
-                    <a href="https://www.instagram.com/js3_silva/" target="_blank" class="btn btn-light"><i
-                            class="fa-brands fa-instagram"></i></a>
+        </nav>
+    </header>
+
+    <!-- Seção 1 -->
+    <section id="secao1" class="bg-light py-5">
+        <div class="container">
+            <div class="row" id="perfil-container">
+                <!-- Cards de repositórios serão inseridos aqui dinamicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 2 -->
+    <section id="secao2" class="py-5">
+        <div class="container">
+            <div class="pb-2 mb-4 text-dark border-bottom border-dark">
+                <h2>Repositórios(7)</h2>
+            </div>
+            <div class="row" id="repo-container">
+                <!-- Cards de repositórios serão inseridos aqui dinamicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 3 -->
+    <section id="secao3" class="bg-light py-5">
+        <div class="container">
+            <div class="pb-2 mb-4 text-dark border-bottom border-dark">
+                <h2>Conteúdo Sugerido</h2>
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Seção 2 -->
-<section id="secao2" class="py-5">
-    <div class="container">
-        <div class="pb-2 mb-4 text-dark border-bottom border-dark">
-            <h2>Repositórios (4)</h2>
-        </div>
-        <div class="row" id="repo-container">
-            <!-- Os cards serão inseridos aqui dinamicamente -->
-        </div>
-    </div>
-</section>
-
-<!-- Seção 3 -->
-<section id="secao3" class="bg-light py-5">
-    <div class="container">
-        <div class="pb-2 mb-4 text-dark border-bottom border-dark">
-            <h2>Conteúdo Sugerido</h2>
-        </div>
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                    aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                    aria-label="Slide 5"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="https://www.devmedia.com.br/guia/bootstrap/38150" target="_blank"><img
-                            src="../assets/img/thumb2.png" class="d-block w-100" alt="Guia bootstrap" height="300px"
-                            width="auto"></a>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="https://www.devmedia.com.br/guia/bootstrap/38150" target="_blank"><img
+                                src="../assets/img/thumb2.png" class="d-block w-100" alt="Guia bootstrap"
+                                height="300px" width="auto"></a>
                     </div>
-                <div class="carousel-item">
-                    <a href="https://www.youtube.com/watch?v=S9uPNppGsGo" target="_blank"><img src="../assets/img/thumb1.png"
-                            class="d-block w-100" alt="video de como programar" height="300px" width="auto"></a>
+                    <div class="carousel-item">
+                        <a href="https://www.youtube.com/watch?v=S9uPNppGsGo" target="_blank"><img
+                                src="../assets/img/thumb1.png" class="d-block w-100" alt="video de como programar"
+                                height="300px" width="auto"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://embarcados.com.br/linguagem-c-guia-completo/" target="_blank"><img
+                                src="../assets/img/linguagemC.png" class="d-block w-100" alt="guia linguagem C"
+                                height="300px" width="auto"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.youtube.com/watch?app=desktop&v=Ds1n6aHchRU" target="_blank"><img
+                                src="../assets/img/thumb4.jpg" class="d-block w-100" alt="video de como programar"
+                                height="300px" width="auto"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.devmedia.com.br/cursos/python" target="_blank"><img
+                                src="../assets/img/thumb3.png" class="d-block w-100" alt="video de como programar"
+                                height="300px" width="auto"></a>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <a href="https://embarcados.com.br/linguagem-c-guia-completo/" target="_blank"><img
-                            src="../assets/img/linguagemC.png" class="d-block w-100" alt="guia linguagem C" height="300px"
-                            width="auto"></a>
-                </div>
-                <div class="carousel-item">
-                    <a href="https://www.youtube.com/watch?app=desktop&v=Ds1n6aHchRU" target="_blank"><img
-                            src="../assets/img/thumb4.jpg" class="d-block w-100" alt="video de como programar" height="300px"
-                            width="auto"></a>
-                </div>
-                <div class="carousel-item">
-                    <a href="https://www.devmedia.com.br/cursos/python" target="_blank"><img src="../assets/img/thumb3.png"
-                            class="d-block w-100" alt="video de como programar" height="300px" width="auto"></a>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Seção 4 -->
-<section id="secao4" class="py-1">
-    <div class="container">
-        <div class="pb-2 mb-4 text-dark border-bottom border-dark">
-            <h2>Colegas de Trabalho</h2>
+    <!-- Seção 4 -->
+    <section id="secao4" class="py-1">
+        <div class="container">
+            <div class="pb-2 mb-4 text-dark border-bottom border-dark">
+                <h2>Colegas de Trabalho</h2>
+            </div>
+            <div id="imagens" class="row">
+                <!-- Item 1 -->
+                <div class="col-md-2 text-center">
+                    <img src="../assets/img/gabriel.png" alt="Imagem colega Gabriel" class="img-thumbnail" height="150px"
+                        width="150px">
+                    <p>Gabriel Lourenço</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="col-md-2 text-center">
+                    <img src="../assets/img/victor.png" alt="Imagem colega Victor" class="img-thumbnail" height="150px"
+                        width="150px">
+                    <p>Victor</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="col-md-2 text-center">
+                    <img src="../assets/img/vitor.png" alt="Imagem colega Vitor" class="img-thumbnail" height="150px"
+                        width="150px">
+                    <p>Vitor</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="col-md-2 text-center">
+                    <img src="../assets/img/gustavo.png" alt="Imagem colega Gustavo" class="img-thumbnail" height="150px"
+                        width="150px">
+                    <p>Gustavo Yannes</p>
+                </div>
+                <!-- Item 5 -->
+                <div class="col-md-2 text-center">
+                    <img src="../assets/img/nathan.png" alt="Imagem colega Nathan" class="img-thumbnail" height="150px"
+                        width="150px">
+                    <p>Nathan</p>
+                </div>
+            </div>
         </div>
-        <div id="imagens" class="row">
-            <!-- Item 1 -->
-            <div class="col-md-2 text-center">
-                <img src="../assets/img/gabriel.png" alt="Imagem colega Gabriel" class="img-thumbnail" height="150px"
-                    width="150px">
-                <p>Gabriel Lourenço</p>
-            </div>
-            <!-- Item 2 -->
-            <div class="col-md-2 text-center">
-                <img src="../assets/img/victor.png" alt="Imagem colega Victor" class="img-thumbnail" height="150px"
-                    width="150px">
-                <p>Victor</p>
-            </div>
-            <!-- Item 3 -->
-            <div class="col-md-2 text-center">
-                <img src="../assets/img/vitor.png" alt="Imagem colega Vitor" class="img-thumbnail" height="150px"
-                    width="150px">
-                <p>Vitor</p>
-            </div>
-            <!-- Item 4 -->
-            <div class="col-md-2 text-center">
-                <img src="../assets/img/gustavo.png" alt="Imagem colega Gustavo" class="img-thumbnail" height="150px"
-                    width="150px">
-                <p>Gustavo Yannes</p>
-            </div>
-            <!-- Item 5 -->
-            <div class="col-md-2 text-center">
-                <img src="../assets/img/nathan.png" alt="Imagem colega Nathan" class="img-thumbnail" height="150px"
-                    width="150px">
-                <p>Nathan</p>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
+    </section>
 
-<!-- Rodapé -->
-<footer class="bg-light text-center py-4">
-    <p>Copyright © 2024 - Jonathan Sena da Silva</p>
-</footer>
-<script src="../assets/scripts/app.js"></script>
-<!-- Bootstrap JavaScript -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Rodapé -->
+    <footer class="bg-light text-center py-4">
+        <p>Copyright © 2024 - Jonathan Sena da Silva</p>
+    </footer>
+    <script src="../assets/scripts/app.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
