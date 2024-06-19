@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const card = document.createElement('div');
                 card.className = 'col-md-4 mb-4';
                 card.innerHTML = `
-                    <a href="repo.html?id=${repo.id}" class="text-decoration-none text-dark">
+                    <a href="repo.html?id=${repo.id}" class="text-decoration-none text-dark repo-link" data-repo-id="${repo.id}">
                         <div class="card h-100">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <h5 class="card-title">${repo.name}</h5>
@@ -67,6 +67,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     </a>
                 `;
                 repoContainer.appendChild(card);
+            });
+
+            // Adiciona o evento de clique aos links dos repositórios
+            const repoLinks = document.querySelectorAll('.repo-link');
+            repoLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    const repoId = this.getAttribute('data-repo-id');
+                    localStorage.setItem('clickedRepoId', repoId);
+                });
             });
         })
         .catch(error => console.error('Erro ao carregar repositórios:', error));
