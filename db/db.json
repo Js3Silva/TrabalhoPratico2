@@ -4,77 +4,95 @@
         "id": 1,
         "title": "Foto 1",
         "description": "Descrição da Foto 1",
-        "imageUrl": "../assets/gabriel.png"
+        "imageUrl": "../public/assets/gabriel.png"
       },
       {
         "id": 2,
         "title": "Foto 2",
         "description": "Descrição da Foto 2",
-        "imageUrl": "../assets/img/victor.png"
+        "imageUrl": "../public/assets/img/victor.png"
       },
       {
-        "id": 2,
+        "id": 3,
         "title": "Foto 2",
         "description": "Descrição da Foto 2",
-        "imageUrl": "../assets/img/vitor.png"
+        "imageUrl": "../public/assets/img/vitor.png"
       },
       {
-        "id": 2,
+        "id": 4,
         "title": "Foto 2",
         "description": "Descrição da Foto 2",
-        "imageUrl": "../assets/img/gustavo.png"
+        "imageUrl": "../public/assets/img/gustavo.png"
       },
       {
-        "id": 2,
+        "id": 5,
         "title": "Foto 2",
         "description": "Descrição da Foto 2",
-        "imageUrl": "../assets/img/nathan.png"
+        "imageUrl": "../public/assets/img/nathan.png"
       }
     ],
         "destaques": [
           {
             "id": 1,
             "title": "Guia Bootstrap",
-            "imageUrl": "../assets/img/thumb2.png",
+            "imageUrl": "../public/assets/img/thumb2.png",
             "link": "https://www.devmedia.com.br/guia/bootstrap/38150"
           },
           {
             "id": 2,
             "title": "Vídeo de Como Programar",
-            "imageUrl": "/assets/img/thumb4.jpg",
+            "imageUrl": "../public/assets/img/thumb4.jpg",
             "link": "https://www.youtube.com/watch?v=S9uPNppGsGo"
           },
           {
             "id": 3,
             "title": "Guia Linguagem C",
-            "imageUrl": "../assets/img/linguagemC.png",
+            "imageUrl": "https://blog.ebaconline.com.br/blog/wp-content/uploads/2022/12/fwlinqaa68qvawjtkuxat.png",
             "link": "https://embarcados.com.br/linguagem-c-guia-completo/"
           },
           {
             "id": 4,
             "title": "Outro Vídeo de Como Programar",
-            "imageUrl": "../assets/img/thumb1.png",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/1200px-Python_logo_and_wordmark.svg.png",
             "link": "https://www.youtube.com/watch?app=desktop&v=Ds1n6aHchRU"
           },
           {
             "id": 5,
             "title": "Curso de Python",
-            "imageUrl": "../assets/img/thumb3.png",
+            "imageUrl": "../public/assets/img/thumb3.png",
             "link": "https://www.devmedia.com.br/cursos/python"
           }
         ],
     "colegasDeTrabalho": [
       {
         "id": 1,
-        "photoUrl": "https://example.com/colleague1.jpg",
-        "name": "Nome do Colega 1",
-        "githubProfileUrl": "https://github.com/colleague1"
+        "photoUrl": "../public/assets/img/gabriel.png",
+        "name": "Gabriel Lourenço",
+        "githubProfileUrl": "https://github.com/gabrielreisresende"
       },
       {
         "id": 2,
-        "photoUrl": "https://example.com/colleague2.jpg",
-        "name": "Nome do Colega 2",
-        "githubProfileUrl": "https://github.com/colleague2"
+        "photoUrl": "../public/assets/img/victor.png",
+        "name": "Victor Gabriel",
+        "githubProfileUrl": "https://github.com/Victorgabrielcruz"
+      },
+      {
+        "id": 3,
+        "photoUrl": "../public/assets/img/vitor.png",
+        "name": "Vitor Hugo",
+        "githubProfileUrl": "https://github.com/VitorHDMarinho"
+      },
+      {
+        "id": 4,
+        "photoUrl": "https://avatars.githubusercontent.com/u/165722302?v=4",
+        "name": "Matheus Titton",
+        "githubProfileUrl": "https://github.com/matheustitton"
+      },
+      {
+        "id": 5,
+        "photoUrl": "../public/assets/img/nathan.png",
+        "name": "Nathan",
+        "githubProfileUrl": "https://github.com/NateAlves"
       }
     ]
   }

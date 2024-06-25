@@ -49,8 +49,8 @@
     transition: 0.4s;
 }
 
-#star:hover{
-    color:yellow
+#star{
+    color:rgb(165, 165, 23)
 }
 
 #person{
@@ -68,7 +68,6 @@
 #imagens{
     justify-content: space-between;
 }
-
 
  /***************************SEÇÃO 4 FIM*************************/
 

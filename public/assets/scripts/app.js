@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const repoContainer = document.getElementById('repo-container');
     const carouselInner = document.getElementById('carousel-inner');
     const carouselIndicators = document.getElementById('carousel-indicators');
+    const imagensContainer = document.getElementById('imagens');
 
-    const githubToken = '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'; // Substitua pelo seu token de acesso pessoal do GitHub
+    const githubToken = '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';
     const githubHeaders = {
         Authorization: `token ${githubToken}`
     };
@@ -20,10 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(user => {
                 console.log('Perfil do usuário carregado:', user);
 
-                // Limpa o conteúdo da div perfil-container antes de adicionar os dados do perfil
                 perfilContainer.innerHTML = '';
 
-                // Cria a estrutura HTML com os dados do perfil
                 const profileHTML = `
                     <div class="pb-2 mb-4 text-dark border-bottom border-dark">
                         <h2>Perfil</h2>
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <h3>${user.name ? user.name : 'Nome não disponível'}</h3>
                             <p>${user.bio ? user.bio : 'Biografia não disponível'}</p>
                             <p><strong>Localização:</strong> ${user.location ? user.location : 'Localização não disponível'}</p>
-                            <p id="user-perfil"><a href="#"><i class="fa-regular fa-user text-primary"> ${user.followers}</i></a></p>
+                            <p id="user-perfil"><i class="fa-regular fa-user text-primary"> ${user.followers}</i><a href="#"></a></p>
                             <p><strong>Site:</strong> ${user.blog ? `<a href="${user.blog}" target="_blank">${user.blog}</a>` : 'Site não disponível'}</p>
                             <div>
                                 <a href="mailto:${user.email}" target="_blank" class="btn btn-light"><i class="fa-solid fa-envelope"></i></a>
@@ -48,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 `;
 
-                // Adiciona o HTML gerado à div perfil-container
                 perfilContainer.innerHTML = profileHTML;
             })
             .catch(error => console.error('Erro ao carregar perfil do usuário:', error));
@@ -63,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (Array.isArray(data)) {
                     data.forEach(repo => {
-                        // Construção do card do repositório
                         const card = document.createElement('div');
                         card.className = 'col-md-4 mb-4';
                         card.innerHTML = `
@@ -83,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         repoContainer.appendChild(card);
                     });
 
-                    // Adiciona o evento de clique aos links dos repositórios
                     const repoLinks = document.querySelectorAll('.repo-link');
                     repoLinks.forEach(link => {
                         link.addEventListener('click', function (event) {
@@ -106,9 +102,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log('Destaques carregados:', destaques);
 
                 destaques.forEach((destaque, index) => {
-                    const isActive = index === 0 ? 'active' : ''; // Define o primeiro item como ativo
+                    const isActive = index === 0 ? 'active' : '';
 
-                    // Criação do indicador
                     const indicator = document.createElement('button');
                     indicator.type = 'button';
                     indicator.setAttribute('data-bs-target', '#carouselExampleIndicators');
@@ -117,13 +112,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (isActive) indicator.className = 'active';
                     carouselIndicators.appendChild(indicator);
 
-                    // Criação do item do carrossel
                     const carouselItem = document.createElement('div');
                     carouselItem.className = `carousel-item ${isActive}`;
                     carouselItem.innerHTML = `
                         <a href="${destaque.link}" target="_blank">
-                            <img src="${destaque.imageUrl}" class="d-block w-100" alt="${destaque.title}"
-                                height="300px" width="auto">
+                            <img src="${destaque.imageUrl}" class="d-block w-100" alt="${destaque.title}" height="300px" width="auto">
                         </a>
                     `;
                     carouselInner.appendChild(carouselItem);
@@ -131,6 +124,29 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .catch(error => console.error('Erro ao carregar destaques:', error));
     }
+
+    // Função para carregar colegas de trabalho do JSON
+    function carregarColegasDeTrabalho() {
+        fetch('http://localhost:3001/colegasDeTrabalho')
+            .then(response => response.json())
+            .then(colegas => {
+                console.log('Colegas de trabalho carregados:', colegas);
+
+                colegas.forEach(colega => {
+                    const colegaCard = document.createElement('div');
+                    colegaCard.className = 'col-md-2 text-center mb-4';
+                    colegaCard.innerHTML = `
+                        <a href="${colega.githubProfileUrl}" target="_blank" style="text-decoration: none; color: black;">
+                            <img src="${colega.photoUrl}" alt="Imagem colega ${colega.name}" class="img-thumbnail" height="150px" width="150px">
+                            <p>${colega.name}</p>
+                        </a>
+                    `;
+                    imagensContainer.appendChild(colegaCard);
+                });
+            })
+            .catch(error => console.error('Erro ao carregar colegas de trabalho:', error));
+    }
+
     // Carregar perfil do usuário ao carregar a página
     carregarPerfilUsuario();
 
@@ -139,4 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Carregar destaques para o carrossel ao carregar a página
     carregarDestaques();
+
+    // Carregar colegas de trabalho ao carregar a página
+    carregarColegasDeTrabalho();
 });

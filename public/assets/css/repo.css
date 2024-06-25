@@ -37,8 +37,8 @@
     font-style: none;
 }
 
-#star:hover{
-    color: yellow;
+#star{
+    color: rgb(165, 165, 23);
 }
 
 #user:hover{
