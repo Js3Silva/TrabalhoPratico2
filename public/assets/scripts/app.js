@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const carouselIndicators = document.getElementById('carousel-indicators');
     const imagensContainer = document.getElementById('imagens');
 
-    const githubToken = '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';
+    const githubToken = 'token';
     const githubHeaders = {
         Authorization: `token ${githubToken}`
     };

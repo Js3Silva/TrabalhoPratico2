@@ -15,7 +15,7 @@ function fetchWithRetry(url, options = {}, retries = 3, backoff = 3000) {
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById('container');
     const repoId = localStorage.getItem('clickedRepoId');
-    const GITHUB_TOKEN = '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';  // Substitua pelo seu token do GitHub
+    const GITHUB_TOKEN = 'token';  
 
     if (repoId) {
         fetchWithRetry(`https://api.github.com/repositories/${repoId}`, {
